@@ -12,9 +12,10 @@ Plug 'karb94/neoscroll.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neovim/nvim-lspconfig'
-Plug 'ray-x/go.nvim'
-Plug 'ray-x/guihua.lua'
 Plug 'folke/tokyonight.nvim'
+
+"Plug 'ray-x/go.nvim'
+"Plug 'ray-x/guihua.lua'
 call plug#end()
 
 
@@ -41,17 +42,14 @@ noremap ª 9gt
 
 colorscheme tokyonight
 
-]])
-require('go').setup()
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
-local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*.go",
-  callback = function()
-   require('go.format').goimport()
-  end,
-  group = format_sync_grp,
-})
+]])
+local lspconfig = require("lspconfig")
+-- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
+lspconfig.gopls.setup({})
+
 
 
 
