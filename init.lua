@@ -1,6 +1,22 @@
 vim.g.mapleader = " "
+vim.cmd([[
+call plug#begin('~/.config/nvim/autoload/plugged')
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+Plug 'github/copilot.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'karb94/neoscroll.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'neovim/nvim-lspconfig'
+Plug 'folke/tokyonight.nvim'
+Plug 'CopilotC-Nvim/CopilotChat.nvim'
+call plug#end()
+]])
 
-require "local.plugins"
+vim.keymap.set("n", "<leader>p", ":PlugUpdate<CR>")
+
 
 require "local.general"
 require "local.lsp"
