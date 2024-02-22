@@ -2,8 +2,15 @@ local lspconfig = require("lspconfig")
 -- https://github.com/golang/tools/blob/master/gopls/doc/vim.md
 vim.g.go_def_mode = 'gopls'
 vim.g.go_info_mode = 'gopls'
-lspconfig.gopls.setup({})
-lspconfig.pyright.setup({})
+
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+lspconfig.gopls.setup({
+	capabilities = capabilities,
+})
+lspconfig.pyright.setup({
+	capabilities = capabilities,
+})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -27,7 +34,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+    vim.keymap.set('n', '<C-s>', vim.lsp.buf.signature_help, opts)
     vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
     vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
     vim.keymap.set('n', '<space>wl', function()
