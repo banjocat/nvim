@@ -18,8 +18,8 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'neovim/nvim-lspconfig'
 
-Plug 'SirVer/ultisnips'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+" Plug 'SirVer/ultisnips'
+" Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
 call plug#end()
 ]])
@@ -38,6 +38,6 @@ require "local.treesitter"
 require "local.undotree"
 
 require "local.cmp"
-require "local.ultisnips"
+-- require "local.ultisnips"
 
 
