@@ -9,7 +9,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'karb94/neoscroll.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'folke/tokyonight.nvim'
-Plug 'CopilotC-Nvim/CopilotChat.nvim'
 Plug 'mbbill/undotree'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -17,6 +16,7 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'neovim/nvim-lspconfig'
+
 
 
 Plug 'mfussenegger/nvim-dap'
@@ -42,7 +42,6 @@ require "local.general"
 
 require "local.lsp"
 require "local.copilot"
-require "local.copilotchat"
 require "local.telescope"
 require "local.treesitter"
 require "local.undotree"

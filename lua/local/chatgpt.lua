@@ -3,5 +3,5 @@ local home = vim.fn.expand("$HOME")
 
 gpt.setup({})
 
-vim.keymap.set("n", "<leader>g", ":ChatGPT<CR>")
+vim.keymap.set("n", "<leader>c", ":ChatGPT<CR>")
 
