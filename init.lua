@@ -18,6 +18,16 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'neovim/nvim-lspconfig'
 
+
+Plug 'mfussenegger/nvim-dap'
+Plug 'leoluz/nvim-dap-go'
+Plug 'mfussenegger/nvim-dap-python'
+
+
+Plug 'MunifTanjim/nui.nvim'
+Plug 'folke/trouble.nvim'
+Plug 'jackMort/ChatGPT.nvim'
+
 Plug 'SirVer/ultisnips'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
@@ -36,8 +46,11 @@ require "local.copilotchat"
 require "local.telescope"
 require "local.treesitter"
 require "local.undotree"
+require 'local.dap'
 
 require "local.cmp"
 require "local.ultisnips"
+
+require "local.chatgpt"
 
 
