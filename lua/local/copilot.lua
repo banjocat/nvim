@@ -1,14 +1,10 @@
-vim.g.copliot_filetype_blacklist = { "markdown", "txt" }
+local copilot = require '_copilot'
 
 
-vim.g.copilot_keymap = {
-  ["n"] = {
-    ["<leader>cc"] = "copilot#complete",
-    ["<leader>cs"] = "copilot#suggest",
-    ["<leader>ci"] = "copilot#insert",
-    ["<leader>cr"] = "copilot#replace",
-    ["<leader>cp"] = "copilot#preview",
-    ["<leader>cd"] = "copilot#disable",
-    ["<leader>ce"] = "copilot#enable",
-  }
-}
+vim.keymap.set("i", "<C-m>", "<cmd>call copilot#Next()<CR>")
+vim.keymap.set("i", "<C-o>", "<cmd>call copilot#Previous()<CR>")
+
+
+
+
+

@@ -10,6 +10,11 @@ Plug 'karb94/neoscroll.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'folke/tokyonight.nvim'
 Plug 'mbbill/undotree'
+
+
+Plug 'Pocco81/auto-save.nvim'
+
+
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
@@ -39,6 +44,7 @@ vim.keymap.set("n", "<leader>p", ":PlugUpdate<CR>")
 
 
 require "local.general"
+require 'local.autosave'
 
 require "local.lsp"
 require "local.copilot"
@@ -51,5 +57,6 @@ require "local.cmp"
 require "local.ultisnips"
 
 require "local.chatgpt"
+
 
 
