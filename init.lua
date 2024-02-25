@@ -11,7 +11,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'folke/tokyonight.nvim'
 Plug 'mbbill/undotree'
 
-
 Plug 'Pocco81/auto-save.nvim'
 
 
