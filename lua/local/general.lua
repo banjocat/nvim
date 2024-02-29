@@ -1,5 +1,5 @@
 vim.opt.number = true
-vim.opt.ignorecase = true
+vim.opt.ignorecase = false
 vim.g.ffs = 'unix'
 
 
@@ -8,6 +8,7 @@ vim.cmd [[colorscheme tokyonight]]
 
 
 vim.keymap.set('n', '<C-\\>', ':NERDTreeToggle<CR>')
+vim.keymap.set('n', '<C-|>', ':NERDTreeFind<CR>')
 vim.keymap.set('i', 'jj', '<esc>')
 vim.keymap.set('n', '<tab><tab>', '<C-w><C-w>')
 
