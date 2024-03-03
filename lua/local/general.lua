@@ -1,6 +1,7 @@
 vim.opt.number = true
 vim.opt.ignorecase = false
 vim.g.ffs = 'unix'
+vim.g.noswapfile = true
 
 
 vim.g.colorscheme = 'tokyonight'
