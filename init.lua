@@ -21,6 +21,8 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'neovim/nvim-lspconfig'
 
+Plug 'jdonaldson/vaxe'
+
 
 
 Plug 'mfussenegger/nvim-dap'
@@ -36,7 +38,13 @@ Plug 'SirVer/ultisnips'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
 call plug#end()
+
+set expandtab shiftwidth=4 tabstop=4
+
 ]])
+
+vim.keymap.set("i", "<tab>", "<cmd>call copilot#AcceptWord()<CR>")
+vim.keymap.set("i", "<S-tab>", "<cmd>call copilot#Accept()<CR>")
 
 
 vim.keymap.set("n", "<leader>p", ":PlugUpdate<CR>")

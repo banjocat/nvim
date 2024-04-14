@@ -12,6 +12,10 @@ lspconfig.pyright.setup({
 	capabilities = capabilities,
 })
 
+lspconfig.lua_ls.setup({
+    capabilities = capabilities,
+})
+
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<leader>z', vim.diagnostic.open_float)
