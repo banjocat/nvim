@@ -32,7 +32,7 @@ Plug 'mfussenegger/nvim-dap-python'
 
 Plug 'MunifTanjim/nui.nvim'
 Plug 'folke/trouble.nvim'
-"Plug 'jackMort/ChatGPT.nvim'
+Plug 'jackMort/ChatGPT.nvim'
 
 Plug 'SirVer/ultisnips'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
@@ -63,7 +63,7 @@ require 'local.dap'
 require "local.cmp"
 require "local.ultisnips"
 
---require "local.chatgpt"
+require "local.chatgpt"
 
 
 

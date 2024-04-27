@@ -6,5 +6,3 @@ vim.keymap.set("i", "<C-o>", "<cmd>call copilot#Previous()<CR>")
 
 
 
-
-
