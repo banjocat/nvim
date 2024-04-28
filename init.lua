@@ -1,5 +1,7 @@
 vim.g.mapleader = "'"
+
 vim.cmd([[
+:set noswapfile
 call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
