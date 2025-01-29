@@ -36,4 +36,4 @@ dapgo.setup({
 })
 
 local dappython = require 'dap-python'
-dappython.setup()
+dappython.setup("python3")

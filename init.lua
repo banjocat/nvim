@@ -1,6 +1,7 @@
 vim.g.mapleader = "'"
 
 vim.cmd([[
+au BufReadPost *.script set syntax=lua
 :set noswapfile
 call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'nvim-lua/plenary.nvim'
@@ -34,11 +35,10 @@ Plug 'mfussenegger/nvim-dap-python'
 
 Plug 'MunifTanjim/nui.nvim'
 Plug 'folke/trouble.nvim'
-Plug 'jackMort/ChatGPT.nvim'
 
 Plug 'SirVer/ultisnips'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-
+Plug 'CopilotC-Nvim/CopilotChat.nvim'
 call plug#end()
 
 set expandtab shiftwidth=4 tabstop=4
@@ -64,8 +64,8 @@ require 'local.dap'
 
 require "local.cmp"
 require "local.ultisnips"
+require "local.copilotchat"
 
-require "local.chatgpt"
 
 
 
